@@ -128,4 +128,17 @@ public class ArrayList<Item> {
         s.append(data[length - 1]);
         return s.toString();
     }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>(20);
+        for (int i = 0; i < 10; i++) {
+            list.insert(i);
+        }
+        System.out.println(list.isEmpty());
+        System.out.println(list.size());
+        System.out.println(list.remove(3));
+        System.out.println(list.insert(3, 3));
+        System.out.println(list.indexOf(8));
+        System.out.println(list.toString());
+    }
 }
