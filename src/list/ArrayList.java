@@ -5,13 +5,13 @@ package list;
  * 2018/5/21 21:20
  * 线性表之顺序表
  */
-public class ArrayList<Item> {
+public class ArrayList<Item extends Comparable<Item>> {
     //动态顺序表数据元素
-    private Item[] data;
+    public Item[] data;
     //初始化时，顺序表的容量
-    private int capacity;
+    public int capacity;
     //实际顺序表的大小
-    private int length;
+    public int length;
 
     public ArrayList(int capacity){
         this.data = (Item[]) new Object[capacity];
@@ -24,6 +24,10 @@ public class ArrayList<Item> {
      */
     public int size(){
         return this.length;
+    }
+
+    public Item get(int i){
+        return data[i];
     }
 
     /**
